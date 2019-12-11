@@ -19,7 +19,7 @@ sns.set_style('whitegrid', {'font.sans-serif': ['Arial Unicode MS', 'Arial']})
 
 # data_temp = {"沪深300":{"nei":510300,"wai":10038}}
 
-with open("2121.csv", "r") as file:
+with open("2121.csv", "r",encoding="utf-8") as file:
     file_data = file.readlines()
 data_temp = {}
 for solo in file_data:
