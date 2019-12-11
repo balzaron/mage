@@ -267,8 +267,8 @@ def draw_font_table(path, data=None):
 
 def sendQQEmail(emailAddrs: list):
     #========= 改成能用的邮箱 这个邮箱不能发=====
-    passwd = 'liufengshi22'
-    msg_from = '1603971690@qq.com'
+    passwd = 'xxx'
+    msg_from = 'liufeng778@163.com'
     # ====================================
     imageFile = '1.png'
     imageApart = MIMEImage(open(imageFile, 'rb').read(), imageFile.split('.')[-1])
@@ -290,7 +290,7 @@ def sendQQEmail(emailAddrs: list):
     msg.attach(imageApart3)
     msg['Subject'] = 'auto msg'
     try:
-        s = smtplib.SMTP_SSL("smtp.qq.com", 465)
+        s = smtplib.SMTP_SSL("smtp.163.com", 465)
         s.login(msg_from, passwd)
         for msg_to in emailAddrs:
             s.sendmail(msg_from, msg_to, msg.as_string())
